@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "full": {
+    "location_ota": "https://github.com/skrimix/rooted-graphene/releases/download/2024070201/raven-2024070201-rootless-2e4c756.zip",
+    "location_csig": "https://github.com/skrimix/rooted-graphene/releases/download/2024070201/raven-2024070201-rootless-2e4c756.zip.csig"
+  }
+}
