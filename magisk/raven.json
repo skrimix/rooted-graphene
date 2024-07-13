@@ -1,7 +1,7 @@
 {
   "version": 2,
   "full": {
-    "location_ota": "https://github.com/skrimix/rooted-graphene/releases/download/2024070900/raven-2024070900-magisk-kitsune-783bd20.zip",
-    "location_csig": "https://github.com/skrimix/rooted-graphene/releases/download/2024070900/raven-2024070900-magisk-kitsune-783bd20.zip.csig"
+    "location_ota": "https://github.com/skrimix/rooted-graphene/releases/download/2024071200/raven-2024071200-magisk-kitsune-783bd20.zip",
+    "location_csig": "https://github.com/skrimix/rooted-graphene/releases/download/2024071200/raven-2024071200-magisk-kitsune-783bd20.zip.csig"
   }
 }
