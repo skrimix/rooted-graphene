@@ -45,9 +45,9 @@ FORCE_OTA_SERVER_UPLOAD=${FORCE_OTA_SERVER_UPLOAD:-'false'}
 OTA_CHANNEL=${OTA_CHANNEL:-stable} # Alternative: 'alpha'
 OTA_BASE_URL="https://releases.grapheneos.org"
 
-AVB_ROOT_VERSION=3.4.1
+AVB_ROOT_VERSION=3.6.0
 
-CUSTOTA_VERSION=4.7
+CUSTOTA_VERSION=4.10
 
 set -o nounset -o pipefail -o errexit
 
