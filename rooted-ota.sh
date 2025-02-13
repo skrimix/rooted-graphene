@@ -36,7 +36,7 @@ OTA_VERSION=${OTA_VERSION:-'latest'}
 # Find latest magisk version here: https://github.com/topjohnwu/Magisk/releases, or:
 # curl --fail -sL -I -o /dev/null -w '%{url_effective}' https://github.com/topjohnwu/Magisk/releases/latest | sed 's/.*\/tag\///;'
 #MAGISK_VERSION=${MAGISK_VERSION:-'v27.0'}
-MAGISK_VERSION=${MAGISK_VERSION:-'kitsune'}
+MAGISK_VERSION=${MAGISK_VERSION:-'kitsune-fork'}
 
 SKIP_CLEANUP=${SKIP_CLEANUP:-''}
 # Set asset released by this script to latest version, even when OTA_VERSION already exists for this device
@@ -190,6 +190,8 @@ function downloadAndroidDependencies() {
   if ! ls ".tmp/magisk-$MAGISK_VERSION.apk" >/dev/null 2>&1 && [[ "${POTENTIAL_ASSETS['magisk']+isset}" ]]; then
     if [[ "$MAGISK_VERSION" == 'kitsune' ]]; then
       curl --fail -sLo ".tmp/magisk-$MAGISK_VERSION.apk" "https://huskydg.github.io/magisk-files/app-release.apk"
+    elif [[ "$MAGISK_VERSION" == 'kitsune-fork' ]]; then
+      curl --fail -sLo ".tmp/magisk-$MAGISK_VERSION.apk" "https://github.com/1q23lyc45/KitsuneMagisk/releases/latest/download/app-release.apk"
     elif [[ "$MAGISK_VERSION" == 'canary' ]]; then
       curl --fail -sLo ".tmp/magisk-$MAGISK_VERSION.apk" "$(curl --fail -sL https://raw.githubusercontent.com/topjohnwu/magisk-files/master/canary.json | jq -r .magisk.link)"
     else
