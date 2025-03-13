@@ -188,9 +188,9 @@ function downloadAndroidDependencies() {
 
   mkdir -p .tmp
   if ! ls ".tmp/magisk-$MAGISK_VERSION.apk" >/dev/null 2>&1 && [[ "${POTENTIAL_ASSETS['magisk']+isset}" ]]; then
-    if [[ "$MAGISK_VERSION" == 'kitsune' ]]; then
-      curl --fail -sLo ".tmp/magisk-$MAGISK_VERSION.apk" "https://huskydg.github.io/magisk-files/app-release.apk"
-    elif [[ "$MAGISK_VERSION" == 'kitsune-fork' ]]; then
+    #if [[ "$MAGISK_VERSION" == 'kitsune' ]]; then
+    #  curl --fail -sLo ".tmp/magisk-$MAGISK_VERSION.apk" "https://huskydg.github.io/magisk-files/app-release.apk"
+    if [[ "$MAGISK_VERSION" == 'kitsune-fork' ]]; then
       curl --fail -sLo ".tmp/magisk-$MAGISK_VERSION.apk" "https://github.com/1q23lyc45/KitsuneMagisk/releases/latest/download/app-release.apk"
     elif [[ "$MAGISK_VERSION" == 'canary' ]]; then
       curl --fail -sLo ".tmp/magisk-$MAGISK_VERSION.apk" "$(curl --fail -sL https://raw.githubusercontent.com/topjohnwu/magisk-files/master/canary.json | jq -r .magisk.link)"
